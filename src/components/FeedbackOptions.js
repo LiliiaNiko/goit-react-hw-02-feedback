@@ -1,14 +1,9 @@
 import React from 'react';
+import { FeedbackWrap } from './FeedbackOptions.styled';
 
 const FeedBackOptions = ({ onGoodReviews, onNeutralRewies, onBadRewies }) => {
   return (
-    <div
-      style={{
-        width: 200,
-        display: 'flex',
-        justifyContent: 'space-between',
-      }}
-    >
+    <FeedbackWrap>
       <button type="button" onClick={onGoodReviews}>
         Good
       </button>
@@ -18,7 +13,7 @@ const FeedBackOptions = ({ onGoodReviews, onNeutralRewies, onBadRewies }) => {
       <button type="button" onClick={onBadRewies}>
         Bad
       </button>
-    </div>
+    </FeedbackWrap>
   );
 };
 

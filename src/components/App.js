@@ -3,6 +3,7 @@ import Statistics from './Statistics';
 import FeedBackOptions from './FeedbackOptions';
 import Section from './Section';
 import Notification from './Notification';
+import { Box } from './Box';
 
 export class App extends Component {
   state = {
@@ -64,14 +65,7 @@ export class App extends Component {
 
   render() {
     return (
-      <div
-        style={{
-          padding: 20,
-          height: '100vh',
-          fontSize: 30,
-          color: '#010101',
-        }}
-      >
+      <Box p={4} height="100vh">
         <Section title="Please leave feedback">
           <FeedBackOptions
             onGoodReviews={this.handleGoodReviews}
@@ -92,7 +86,7 @@ export class App extends Component {
             <Notification message="There is no feedback" />
           )}
         </Section>
-      </div>
+      </Box>
     );
   }
 }

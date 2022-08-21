@@ -3,7 +3,7 @@ import React from 'react';
 const Notification = ({ message }) => {
   return (
     <div>
-      <h2>{message}</h2>
+      <h3>{message}</h3>
     </div>
   );
 };
