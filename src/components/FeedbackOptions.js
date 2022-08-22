@@ -1,18 +1,21 @@
 import React from 'react';
 import { FeedbackWrap } from './FeedbackOptions.styled';
 
-const FeedBackOptions = ({ onGoodReviews, onNeutralRewies, onBadRewies }) => {
+const FeedBackOptions = ({ options, onLeaveFeedback }) => {
   return (
     <FeedbackWrap>
-      <button type="button" onClick={onGoodReviews}>
-        Good
-      </button>
-      <button type="button" onClick={onNeutralRewies}>
-        Neutral
-      </button>
-      <button type="button" onClick={onBadRewies}>
-        Bad
-      </button>
+      {options.map((option, idx) => {
+        return (
+          <button
+            key={idx}
+            type="button"
+            name={option}
+            onClick={onLeaveFeedback}
+          >
+            {option}
+          </button>
+        );
+      })}
     </FeedbackWrap>
   );
 };
